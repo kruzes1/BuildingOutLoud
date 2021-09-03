@@ -1,0 +1,20 @@
+[package]
+name = "docloc"
+version = "0.1.1"
+description = "Created with Love"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "docloc"
+
+[features]
+no-entrypoint = []
+no-idl = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { path = "../../../../lang" }
+anchor-spl = { path = "../../../../spl" }
+spl-token = { version = "3.1.1", features = ["no-entrypoint"] }
